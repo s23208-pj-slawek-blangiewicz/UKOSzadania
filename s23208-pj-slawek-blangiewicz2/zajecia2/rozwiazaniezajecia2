@@ -1,0 +1,19 @@
+Utworzyc plik w cudzym katalogu mogę dopiero wtedy, kiedy nadam uzytkownikom z grupy wlasciciela prawo do zapisu. Udało mi się usunac
+cudzy plik z mojego katologu. Nie spodziewalem sie tego, ale tak jak wspomnial Pan na cwiczeniach. Moglem to zrobic, poniewaz jestem wlas-
+cicielem katalogu.
+
+Jeżeli usunę wszelkie uprawnienia do katalogu to nie mogę do niego wejść. Jeżeli usunę wszelkie uprawnienia do katalogu, pozniej znowu mogę
+je przywrócić używając chmod. Z tego co sprawdziłem to, jeżeli usuniemy prawa dostępu do katalogu ABC, a mamy pełne prawa do XYZ to i tak
+nie możemy przejsć ABC/XYZ. Chmod mogę używać, jeżeli jestem właścicielem pliku.
+
+Używając operatora ">" umieszczany jest nowy tekst w pliku, ale poprzedni tekst znika. Operator ">>" dodaje nowy tekst do pliku w nowej linii, a 
+poprzedni tekst zostaje w poprzedniej linii. ">>" nadpisuje plik
+
+szuflandia.pjwstk.edu.pl/~23208/strona.html
+Minimalne uprawnienia do pliku strona.html to:
+- - -  - - - r - - ( 004)
+Minimalne uprawnienia do katalogu public_html to:
+- - -  - - -  - - x (001)
+
+Umask odpowiada za prawa jakie są przypisane podczas tworzenia pliku. Domyślnie jest to wartość 0022. W zależności od tego jak będziemy
+zmieniali wartość przypisaną do umask zmieniać się będą uprawnienia do plików. 

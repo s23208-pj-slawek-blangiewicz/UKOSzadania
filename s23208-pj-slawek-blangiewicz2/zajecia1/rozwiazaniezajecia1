@@ -1,0 +1,101 @@
+1.Uruchom terminal.
+Uruchamiam terminal poprzez wejście do "system tools" i wybieram LXTerminal. Wydaje mi się, że w tym zadaniu długi opis jest zbędny.  
+
+2.Wyświetl zawartość aktualnego katalogu.
+Zawartość aktualnego katalogu wyświetlam poprzez użycie polecenia "ls". Wyświetliły mi się katalogi takie jak: Desktop    Downloads  Music     
+Public  Templates Documents  katalog    Pictures  repo    Videos. Podstawowa i często używana komenda. Czesto korzystaliśmy z niej podczas 
+ostatnich ćwiczeń z UKO, tylko używaliśmy jej z operatorem -l, aby sprawdzić jakie uprawnienia mają nadane katalogi.
+
+3.Sprawdź gdzie aktualnie się znajdujesz. Porównaj to z tym co możesz zobaczyć w interfejsie graficznym.
+Sprawdzić gdzie się aktualnie znajduję mogę poprzez użycie komendy PWD. Aktualnie znajduję się w /home/ubuntu. Jest to katalog główny, 
+w nim znajduje się pulpit, a ja aktualnie znajduję się na pulpicie, więc zgadzało by się to z tym co aktualnie widzę.
+
+4.Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+cd Desktop - przechodzę do katalogu pulpit z użyciem ścieżki względnej, jeśli miałbym użyć ścieżki bezwzględnej to wyglądałoby to w następujący
+sposób: cd /home/ubuntu/Desktop. Użycie ścieżki względnej jest znacznie szybsze w tym przypadku.
+
+5.Sprawdź gdzie jesteś.
+Używam komendy pwd i dostaję wynik /home/ubuntu/Desktop, ponieważ wcześniej przechodziłem do katalogu pulpit, więc wynik, który 
+otrzymałem jest poprawny.
+
+6.Wyświetl zawartość bieżącego katalogu.
+Zawartość bieżącego katalogu wyświetlam poprzez użycie komendy ls i dostaję wynik: adding-packages-permanently-info.txt   foldertest  
+ lekcja   lxterminal.desktop  'notatki zajecia'   passwords-info.txt. 
+Są to wszystkie katalogi i pliki, które znajdują się na pulpicie. Wynik, którzy otrzymałem zgadza się z tym co widzę.
+
+7.Zobacz, czy przechodząc do tego katalogu w sposób graficzny (wyklikać) otrzymamy to samo?
+Po "wyklikaniu" tej ścieżki widzę to samo. Różnica jest taka, że wyklikanie zajmuje więcej czasu. Myślę, że aby oswoić się z Linuxem warto jak
+najwięcej korzystać z termianala, a omjać wersję graficzną. Na pewno to zaprocentuje w przyszłości. Aktualnie nawet wersja graficzna stanowi dla
+mnie wyzwanie, ponieważ wcześniej nie korzystałem z Linuxa.
+
+8.Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+Zawartość katalogu głównego wyświetliłem poprzez ls /home/ubuntu. Użyłem komendy ls i ścieżki katalogu głównego.
+
+9.Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej.
+Aby przejść do katalogu Obrazy użyłem komendy cd ../Pictures. Musiałem najpierw cofnąć się do katalogu głównego, a później wejść do katalogu
+Obrazy. (Znajdowałem się cały czas w katalogu Pulpit).
+
+10.Sprawdź gdzie jesteś.
+Za pomocą komendy pwd sprawdzam gdzie aktualnie się znajduję i otrzymałem wynik /home/ubuntu/Pictures. Wydaje mi się, że opis jest zbędny,
+ponieważ używaliśmy już tej komendy w poprzednich zadaniach.
+
+11.Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+Po wpisaniu cd i ścieżki ././././././ znajduję się nadal w tym samym katalogu. Nie rozumiem działania tego polecenia. Po wpisanu cd / otrzymałem:
+bin   dev  home        initrd.img.old  lib64       media  opt   root  sbin  swapfile  tmp  vagrant  vmlinuz
+boot  etc  initrd.img  lib             lost+found  mnt    proc  run   srv   sys       usr  var      vmlinuz.old
+Wydaje mi się, że są to pliki systemowe. 
+.. - oznacza przejście do katalogu nadrzędnego, lecz nie wiem co oznacza .
+Potrzebowałbym Pana pomocy, aby dokładnie zrozumieć co dzieje się po wpisaniu tej ścieżki.
+
+12.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+Użyłem cd /home/ubuntu, aby przejść do swojego katalogu domowego za pomocą ścieżki bezwzględnej. Jeśli chciałbym przejść do katalogu 
+domowego za pomocą ścieżki względnej wystarczyłoby "cd ..", ponieważ znajdowałem się w katalogu obrazy, a on znajduje się w katalogu 
+domowym.
+13.Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Proponuję także zapytać prowadzącego.
+Po wpisanu cd /root otrzymałem wynik: bash: cd: /root: Permission denied . Nie mam uprawnień, aby wejść do katalogu root.
+
+14.Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F1 
+Ctr+Alt+F1 przełącza do terminala tekstowego, aby wrócić do terminala graficznego  należy użyć kombinacji ctrl+alt+F7. Z tego co pamiętam
+wspominał Pan o tym na pierwszych ćwiczeniach, ale udało mi się to przed chwilą wygooglować.
+____________________________________________________________________________________________________________________________________________
+
+Korzystając z komend cd oraz mkdir stwórz następujące drzewo katalogów w swoim katalogu domowym (w dowolnym podkatalogu, albo bezpośrednio w ~):
+
+ukos
+ |\ katalog
+ |      |\ katalog2
+ |       \ katalog3
+  \ klamka
+
+ubuntu@bss-ubu1804:~$ mkdir ukos
+ubuntu@bss-ubu1804:~$ cd ukos
+ubuntu@bss-ubu1804:~/ukos$ mkdir katalog
+ubuntu@bss-ubu1804:~/ukos$ mkdir klamka
+ubuntu@bss-ubu1804:~/ukos$ cd katalog
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog$ 
+
+W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+inny.txt  nowy.txt  zajecia2.log  zajecia2.txt
+
+Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
+mkdir -p ukos/to/jest/dluga/nazwa
+
+następnie umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+touch ukos/to/jest/dluga/nazwa/dane.txt
+
+Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *.txt
+
+Usuń katalog ukos/katalog/katalog2
+ubuntu@bss-ubu1804:~$ rmdir ukos/katalog/katalog2
+
+Usuń cały katalog klamka za pomocą jednego polecenia 
+ubuntu@bss-ubu1804:~$ rm -r ukos/klamka
+Dowiedziałem się tego po wpisanu man rm
+"-r, -R, --recursive
+              rekurencyjnie usuwa katalogi i ich zawartość"
+
